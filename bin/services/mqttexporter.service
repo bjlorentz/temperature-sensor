@@ -1,0 +1,14 @@
+[Unit]
+Description=Grafana
+Wants=network-online.target
+After=network-online.target
+ 
+[Service]
+User=pi
+Group=pi
+Type=simple
+ExecStart=/opt/mqttgateway
+ 
+[Install]
+WantedBy=multi-user.target
+
